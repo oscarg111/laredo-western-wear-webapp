@@ -4,37 +4,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Mens from "./pages/Mens";
+import Womens from "./pages/Womens";
+import Accessories from "./pages/Accessories";
+import Jewelry from "./pages/Jewelery";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <Link className="navbar-brand" to="/">
-            MyReactApp
-          </Link>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Routes */}
       <div className="container mt-4">
@@ -42,6 +21,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/mens" element={<Mens />} />
+          <Route path="/womens" element={<Womens />} />
+          <Route path="/accessories" element={<Accessories />} />
+          <Route path="/jewelry" element={<Jewelry />} />
         </Routes>
       </div>
     </Router>
