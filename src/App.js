@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -9,6 +8,8 @@ import Womens from "./pages/Womens";
 import Accessories from "./pages/Accessories";
 import Jewelry from "./pages/Jewelery";
 import Navbar from "./components/Navbar";
+import ItemsPage from "./pages/ItemsPage";
+import ItemPage from "./pages/ItemPage"; // for one item
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Navbar />
 
       {/* Routes */}
-      <div className="container mt-4">
+      <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -25,6 +26,11 @@ function App() {
           <Route path="/womens" element={<Womens />} />
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/jewelry" element={<Jewelry />} />
+          <Route path="/:category/:subcategory" element={<ItemsPage />} />
+          <Route
+            path="/:category/:subcategory/:itemId"
+            element={<ItemPage />}
+          />
         </Routes>
       </div>
     </Router>

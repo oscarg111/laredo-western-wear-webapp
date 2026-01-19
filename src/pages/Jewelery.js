@@ -2,7 +2,7 @@ import React from "react";
 import Item from "../components/Item";
 import Sidebar from "../components/Sidebar";
 
-const Jewelery = () => {
+const Jewery = () => {
   const items = [
     {
       name: "Cowboy Hat",
@@ -18,7 +18,7 @@ const Jewelery = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-4">Jewelery</h2>
+      <h2 className="mb-4">Jewery</h2>
 
       <div className="row">
         <div className="col-md-3">
@@ -39,4 +39,4 @@ const Jewelery = () => {
   );
 };
 
-export default Jewelery;
+export default Jewery;

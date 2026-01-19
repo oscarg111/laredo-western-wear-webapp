@@ -1,0 +1,47 @@
+.nav-hover {
+  position: relative;
+}
+
+/* Base state (hidden) */
+.hover-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background: white;
+  padding: 1rem 1.5rem;
+  /* min-width: 220px; */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 200ms ease-out, transform 200ms ease-out, visibility 200ms;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover state */
+.nav-hover:hover .hover-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+/* Menu items */
+.hover-item {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+.hover-item:hover {
+  color: #b00000;
+  text-decoration: underline;
+}
+
+.navbar {
+  z-index: 1000;
+}

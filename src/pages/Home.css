@@ -1,0 +1,18 @@
+.hero-bg {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-image: url("../assets/tumblr_nytqw4xu7G1u9i37so1_400.gif");
+  background-size: cover;
+  background-position: center;
+}
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
